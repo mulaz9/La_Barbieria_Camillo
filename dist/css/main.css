@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: "Orbitron", sans-serif;
+  font-variant: small-caps; }
+
+button {
+  border: none;
+  background: transparent; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+ul {
+  list-style: none; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 1; }
+
+.overlay-a {
+  position: absolute;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -2; }
+
+h2 {
+  margin: 0;
+  padding: 20px;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center; }
+
+.hidden {
+  display: none; }
+
+/* Navbar */
+#main-navbar {
+  position: sticky;
+  left: 0;
+  top: 0; }
+  #main-navbar .navbar-container {
+    margin: auto;
+    height: 0px;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    /* .navbar-ul {
+      max-height: 70px;
+      padding: 0 30px;
+
+      ul {
+        display: flex;
+        li {
+          padding: 0 30px;
+
+          a {
+            color: black;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    } */ }
+    #main-navbar .navbar-container .navbar-menu .menu-lines {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-top: 100px;
+      margin-left: 30px;
+      padding: 40px; }
+      #main-navbar .navbar-container .navbar-menu .menu-lines:hover {
+        cursor: pointer; }
+      #main-navbar .navbar-container .navbar-menu .menu-lines .line1 {
+        width: 40px;
+        height: 2px;
+        background-color: white;
+        margin-bottom: 10px; }
+      #main-navbar .navbar-container .navbar-menu .menu-lines .line2 {
+        width: 40px;
+        height: 2px;
+        background-color: white; }
+    #main-navbar .navbar-container .social {
+      display: flex;
+      justify-content: right;
+      padding: 0 30px;
+      margin-top: 100px;
+      margin-right: 30px; }
+      #main-navbar .navbar-container .social a {
+        padding: 10px;
+        color: white; }
+        #main-navbar .navbar-container .social a:hover {
+          color: #c49a6c; }
+
+.menu {
+  position: absolute;
+  left: 25%;
+  top: 150px;
+  z-index: 5;
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  color: #0e76bc; }
+  .menu ul {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 3rem; }
+  .menu .x {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold; }
+    .menu .x:hover {
+      cursor: pointer; }
+
+/* Section-a */
+#section-a .container {
+  background: url(/dist/img/facebook-bg.jpg) no-repeat center center/cover;
+  height: 100vh;
+  top: 0;
+  position: relative;
+  z-index: -1;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  #section-a .container h1 {
+    padding: 70px;
+    font-variant: small-caps;
+    font-size: 5rem;
+    margin: auto;
+    color: white; }
+  #section-a .container .logo {
+    margin: auto;
+    width: 60%; }
+    #section-a .container .logo img {
+      width: 80%;
+      height: auto; }
+
+/* Section: servizi */
+#servizi {
+  height: 55vh;
+  background-color: white; }
+  #servizi .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center; }
+    #servizi .logos .icons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center; }
+      #servizi .logos .icons img {
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 50%; }
+      #servizi .logos .icons h3 {
+        font-size: 1rem;
+        padding: 10px;
+        text-transform: uppercase; }
+
+/* Section: dove siamo */
+#dove-siamo .container {
+  background: #444;
+  color: white; }
+  #dove-siamo .container .map {
+    display: flex;
+    text-align: center; }
+    #dove-siamo .container .map img {
+      width: 75%; }
+    #dove-siamo .container .map .map-text {
+      padding: 0 50px; }
+      #dove-siamo .container .map .map-text a {
+        color: yellow; }
+        #dove-siamo .container .map .map-text a:hover {
+          text-decoration: underline; }
+      #dove-siamo .container .map .map-text h3 {
+        padding: 30px 0; }
+      #dove-siamo .container .map .map-text ul {
+        padding: 0;
+        margin: 0; }
+        #dove-siamo .container .map .map-text ul li {
+          padding: 20px 0; }
+          #dove-siamo .container .map .map-text ul li:first-child {
+            font-size: 1.5rem;
+            font-weight: bold; }
+
+/* Footer */
+#main-footer {
+  font-family: "Roboto", sans-serif;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center; }
+  #main-footer p {
+    padding-left: 50px; }
+  #main-footer i {
+    color: white;
+    transform: scale(1.5);
+    padding: 0 1rem; }
+  #main-footer a {
+    padding-right: 50px;
+    color: white; }
+
+@media (max-width: 600px) {
+  /* navbar */
+  #main-navbar .menu {
+    height: 30vh;
+    margin-top: 40px;
+    padding-top: 30px; }
+    #main-navbar .menu ul {
+      line-height: 3rem;
+      font-size: 2rem; }
+
+  /* Section-a */
+  #section-a .container {
+    background: url(/dist/img/taglio-uomo-back.jpg) no-repeat center center/cover; }
+    #section-a .container h2 {
+      padding: 80px 30px;
+      font-size: 3rem; }
+    #section-a .container .overlay {
+      background-color: black; }
+    #section-a .container .logo {
+      padding-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #section-a .container .logo img {
+        width: 150%;
+        height: auto; }
+
+  /* Section: servizi */
+  #servizi {
+    height: auto; }
+    #servizi .logos {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center; }
+      #servizi .logos .icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center; }
+        #servizi .logos .icons img {
+          width: 40%;
+          border: 2px solid black;
+          border-radius: 50%; }
+        #servizi .logos .icons h3 {
+          font-size: 1rem; }
+
+  /* Footer */
+  #main-footer {
+    font-size: 0.7rem; }
+    #main-footer p {
+      padding-left: 0px;
+      margin: auto; }
+    #main-footer .developer {
+      display: none; } }
+@media (max-width: 930px) {
+  h2 {
+    font-size: 3rem; }
+
+  /* Navbar */
+  #main-navbar .navbar-container {
+    justify-content: space-between; }
+    #main-navbar .navbar-container .navbar-ul {
+      display: none; }
+
+  /* Section-a */
+  #section-a .container h1 {
+    font-size: 3rem;
+    padding: 100px 30px; }
+
+  /* Section: dove siamo */
+  #dove-siamo .container .map {
+    display: flex;
+    flex-direction: column;
+    text-align: center; }
+    #dove-siamo .container .map img {
+      width: 100%; } }
+@media (min-width: 930px) {
+  #main-navbar .navbar-container .menu-wrap {
+    display: none; } }
+@media (max-height: 450px) {
+  #section-a .container h1 {
+    display: none; }
+  #section-a .container .logo {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #section-a .container .logo img {
+      width: 100%;
+      height: auto; } }
+
+/*# sourceMappingURL=main.css.map */

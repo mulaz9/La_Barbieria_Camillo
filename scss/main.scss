@@ -1,0 +1,412 @@
+@import "variables";
+@import "utilityes";
+
+/* Navbar */
+#main-navbar {
+  position: sticky;
+  left: 0;
+  top: 0;
+
+  .navbar-container {
+    margin: auto;
+    height: 0px;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    .navbar-menu {
+      .menu-lines {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 30px;
+        padding: 40px;
+        &:hover {
+          cursor: pointer;
+        }
+        .line1 {
+          width: 40px;
+          height: 2px;
+          background-color: $light-color;
+          margin-bottom: 10px;
+        }
+        .line2 {
+          width: 40px;
+          height: 2px;
+          background-color: $light-color;
+        }
+      }
+    }
+    /* .navbar-ul {
+      max-height: 70px;
+      padding: 0 30px;
+
+      ul {
+        display: flex;
+        li {
+          padding: 0 30px;
+
+          a {
+            color: black;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    } */
+
+    .social {
+      display: flex;
+      justify-content: right;
+      padding: 0 30px;
+      margin-top: 100px;
+      margin-right: 30px;
+
+      a {
+        padding: 10px;
+        color: $light-color;
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+.menu {
+  position: absolute;
+  left: 25%;
+  top: 150px;
+  z-index: 5;
+  height: 50vh;
+  width: 50vw;
+  background-color: white;
+  color: $secondary-color;
+  ul {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 3rem;
+  }
+  .x {
+    position: absolute;
+    right: 15px;
+    top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Section-a */
+
+#section-a {
+  .container {
+    background: url(/dist/img/facebook-bg.jpg) no-repeat center center/cover;
+    height: 100vh;
+    top: 0;
+    position: relative;
+    z-index: -1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      padding: 70px;
+      font-variant: small-caps;
+      font-size: 5rem;
+      margin: auto;
+      color: $light-color;
+    }
+
+    .logo {
+      margin: auto;
+      width: 60%;
+
+      img {
+        width: 80%;
+        height: auto;
+      }
+    }
+  }
+}
+
+/* Section: servizi */
+#servizi {
+  height: 55vh;
+  background-color: $light-color;
+  .logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+
+    .icons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 40%;
+        border: 2px solid black;
+        border-radius: 50%;
+      }
+
+      h3 {
+        font-size: 1rem;
+        padding: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/* Section: dove siamo */
+#dove-siamo {
+  .container {
+    background: #444;
+    color: $light-color;
+
+    .map {
+      display: flex;
+      text-align: center;
+
+      img {
+        width: 75%;
+      }
+
+      .map-text {
+        padding: 0 50px;
+
+        a {
+          &:hover {
+            text-decoration: underline;
+          }
+
+          color: $primary-color;
+        }
+
+        h3 {
+          padding: 30px 0;
+        }
+
+        ul {
+          padding: 0;
+          margin: 0;
+
+          li {
+            &:first-child {
+              font-size: 1.5rem;
+              font-weight: bold;
+            }
+
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Footer */
+#main-footer {
+  font-family: "Roboto", sans-serif;
+  background: $dark-color;
+  color: $light-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  p {
+    padding-left: 50px;
+  }
+
+  i {
+    color: $light-color;
+    transform: scale(1.5);
+    padding: 0 1rem;
+  }
+  a {
+    padding-right: 50px;
+    color: $light-color;
+  }
+}
+
+@media (max-width: 600px) {
+  /* navbar */
+  #main-navbar {
+    .menu {
+      height: 30vh;
+      margin-top: 40px;
+      padding-top: 30px;
+      ul {
+        line-height: 3rem;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  /* Section-a */
+  #section-a {
+    .container {
+      background: url(/dist/img/taglio-uomo-back.jpg) no-repeat center
+        center/cover;
+
+      h2 {
+        padding: 80px 30px;
+        font-size: 3rem;
+      }
+
+      .overlay {
+        background-color: black;
+      }
+
+      .logo {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 150%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  /* Section: servizi */
+  #servizi {
+    height: auto;
+    .logos {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+
+      .icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+
+        img {
+          width: 40%;
+          border: 2px solid black;
+          border-radius: 50%;
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  /* Footer */
+  #main-footer {
+    font-size: 0.7rem;
+
+    p {
+      padding-left: 0px;
+      margin: auto;
+    }
+
+    .developer {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 930px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  /* Navbar */
+  #main-navbar {
+    .navbar-container {
+      justify-content: space-between;
+
+      .navbar-ul {
+        display: none;
+      }
+    }
+  }
+
+  /* Section-a */
+  #section-a {
+    .container {
+      h1 {
+        font-size: 3rem;
+        padding: 100px 30px;
+      }
+    }
+  }
+
+  /* Section: dove siamo */
+  #dove-siamo {
+    .container {
+      .map {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 930px) {
+  #main-navbar {
+    .navbar-container {
+      .menu-wrap {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-height: 450px) {
+  #section-a {
+    .container {
+      h1 {
+        display: none;
+      }
+
+      .logo {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

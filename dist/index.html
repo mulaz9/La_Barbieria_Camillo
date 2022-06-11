@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f2426038f9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="https://unpkg.com/jarallax@2.0"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab&family=Titillium+Web&display=swap");
+    </style>
+    <title>La Barbieria Camillo</title>
+  </head>
+
+  <body>
+    <nav id="main-navbar">
+      <div class="overlay hidden"></div>
+      <div class="menu hidden">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#dove-siamo">Dove Siamo</a></li>
+          <li><a href="#orari">Orari</a></li>
+        </ul>
+        <button class="x">x</button>
+      </div>
+      <div class="navbar-container">
+        <div class="navbar-menu">
+          <div class="menu-lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+        <!-- <div class="navbar-ul">
+          <ul>
+            <li class="home"><a href="">Home</a></li>
+            <li class="servizi"><a href="">Servizi</a></li>
+            <li class="dove-siamo"><a href="">Dove Siamo</a></li>
+            <li class="prenota"><a href="">Prenota</a></li>
+          </ul>
+        </div> -->
+        <div class="social">
+          <a href="https://www.facebook.com/labarbieria.camillo" target="_blank"
+            ><i class="fab fa-brands fa-facebook-square fa-2x"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/la_barbieria_camillo/"
+            target="_blank"
+            ><i class="fab fa-brands fa-instagram fa-2x"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+    <section id="section-a">
+      <div class="jarallax container" data-jarallax data-speed="0.3">
+        <div class="overlay-a"></div>
+        <h1>Benvenuti</h1>
+        <div class="logo">
+          <img src="/dist/img/logo_bianco_2.png" alt="logo" />
+        </div>
+        <h1>
+          <span
+            class="txt-type"
+            data-wait="3000"
+            data-words='["Dove la Tradizione", "Incontra la Modernità"]'
+          ></span>
+        </h1>
+      </div>
+    </section>
+    <section id="servizi">
+      <div class="container">
+        <h2>Servizi</h2>
+        <div class="logos">
+          <div class="icons">
+            <img src="/dist/img/beard.png" alt="beard" />
+            <h3>Cura della Barba</h3>
+          </div>
+          <div class="icons">
+            <img src="/dist/img/haircut.jpg" alt="haircut" />
+            <h3>Taglio Capelli</h3>
+          </div>
+          <div class="icons">
+            <img src="/dist/img/razor.jpg" alt="razor" />
+            <h3>Rasatura</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="dove-siamo">
+      <div class="container">
+        <h2>Dove Siamo</h2>
+        <div class="map">
+          <img src="/dist/img/map.png" alt="map" />
+          <div class="map-text">
+            <a href="https://g.page/la-barbieria-camillo?share" target="_blank">
+              <h3>
+                via G. Matteotti, 2 <br />
+                San Stino di Livenza (VE)
+              </h3>
+            </a>
+            <ul>
+              <li id="orari">ORARI</li>
+              <li>
+                Martedi <br />
+                8.30-12.00 <br />
+                15.00-19.30
+              </li>
+              <li>
+                Mercoledì <br />
+                15.00-22.00
+              </li>
+              <li>
+                Giovedì <br />
+                8.30-12.00 <br />
+                15.00-19.30
+              </li>
+              <li>
+                Venerdì <br />
+                9.00-12.30 <br />
+                15.00-19.30
+              </li>
+              <li>
+                Sabato <br />
+                8.00-17.00 continuato
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="main-footer">
+      <p>La Barbieria Camillo &copy; 2022, All Rights Reserved</p>
+      <div class="developer">
+        <a href="mailto:davide.mulato@gmail.com">
+          <i class="fas fa-solid fa-desktop"></i>Davide Mulato</a
+        >
+      </div>
+    </footer>
+  </body>
+
+  <!-- Local Js File -->
+  <script src="/main.js"></script>
+</html>
