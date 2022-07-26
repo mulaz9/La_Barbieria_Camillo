@@ -7,77 +7,15 @@ window.addEventListener("scroll", function () {
   }
 });
 
-class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
-    this.words = words;
-    this.txt = "";
-    this.wordIndex = 0;
-    this.wait = parseInt(wait, 10);
-    this.type();
-    this.isDeleting = false;
-  }
-
-  type() {
-    // Current index of word
-    const current = this.wordIndex % this.words.length;
-    // Get full text of current word
-    const fullTxt = this.words[current];
-
-    // Check if deleting
-    if (this.isDeleting) {
-      // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
-
-    // Initial Type Speed
-    let typeSpeed = 200;
-
-    if (this.isDeleting) {
-      typeSpeed /= 2;
-    }
-
-    // If word is complete
-    if (!this.isDeleting && this.txt === fullTxt) {
-      // Make pause at end
-      typeSpeed = this.wait;
-      // Set delete to true
-      this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === "") {
-      this.isDeleting = false;
-      // Move to next word
-      this.wordIndex++;
-      // Pause before start typing
-      typeSpeed = 500;
-    }
-
-    setTimeout(() => this.type(), typeSpeed);
-  }
-}
-
-// Init On DOM Load
-document.addEventListener("DOMContentLoaded", init);
-
-// Init App
-function init() {
-  const txtElement = document.querySelector(".txt-type");
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-  const wait = txtElement.getAttribute("data-wait");
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
-}
-
 // Menu hidden
 const menu = document.querySelector(".menu");
 const menuLines = document.querySelector(".menu-lines");
-const hideMenu = document.querySelector(".x, .menu");
+const hideMenuX = document.querySelector(".x");
+const logo = document.querySelector(".logo");
 const overlay = document.querySelector(".overlay");
+const header1 = document.querySelector(".welcome");
+const headerText = document.querySelector(".header__text");
+
 const openMenu = function () {
   menu.classList.remove("hidden");
   overlay.classList.remove("hidden");
@@ -88,4 +26,120 @@ const closeMenu = function () {
 };
 
 menuLines.addEventListener("click", openMenu);
-hideMenu.addEventListener("click", closeMenu);
+hideMenuX.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
+
+// Slider
+const slider = function () {
+  const slides = document.querySelectorAll(".photo-container");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+
+  let curSlide = 0;
+  const maxSlide = slides.length;
+
+  // Functions
+  const goToSlide = function (slide) {
+    slides.forEach(
+      (s, i) => (s.style.transform = `translateX(${200 * (i - slide)}%)`)
+    );
+  };
+
+  // Next slide
+  const nextSlide = function () {
+    if (curSlide === maxSlide - 1) {
+      curSlide = 0;
+    } else curSlide++;
+    goToSlide(curSlide);
+  };
+
+  // Prev slide
+  const prevSlide = function () {
+    if (curSlide === 0) {
+      curSlide = maxSlide - 1;
+    } else curSlide--;
+    goToSlide(curSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+  };
+  init();
+
+  // Event Handler
+  btnLeft.addEventListener("click", prevSlide);
+  btnRight.addEventListener("click", nextSlide);
+
+  document.addEventListener("keydown", function (e) {
+    console.log(e);
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
+  });
+};
+slider();
+
+// Smooth scrolling
+// const btnScrollto = document.querySelector(".btn--scroll-to");
+// const doveSiamo = document.querySelector("#dove-siamo");
+
+// btnScrollto.addEventListener("click", function (e) {
+//   const dScoords = doveSiamo.getBoundingClientRect();
+// });
+
+// doveSiamo.scrollIntoView({ behavior: "smooth" });
+
+// Menu-lines Hover effect
+const line1 = document.querySelector(".line1");
+const line2 = document.querySelector(".line2");
+
+menuLines.addEventListener("mouseenter", function () {
+  line2.style.transform = `translateY(-12px)`;
+  line2.style.width = "60px";
+});
+menuLines.addEventListener("mouseleave", function () {
+  line2.style.transition = "1s";
+  line2.style.transform = `translateY(0)`;
+  line2.style.width = "40px";
+});
+
+///////////////////////////////////////
+// Sticky navigation: Intersection Observer API
+
+// const stickyNav = function (entries) {
+//   const [entry] = entries;
+//   // console.log(entry);
+
+//   if (!entry.isIntersecting) nav.classList.add("sticky");
+//   else nav.classList.remove("sticky");
+// };
+
+// const headerObserver = new IntersectionObserver(stickyNav, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: `-${navHeight}px`,
+// });
+
+// headerObserver.observe(sectionA);
+
+///////////////////////////////////////
+// Reveal sections
+const allSections = document.querySelectorAll(".section");
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});

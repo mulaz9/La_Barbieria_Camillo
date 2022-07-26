@@ -8,27 +8,32 @@
       src="https://kit.fontawesome.com/f2426038f9.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="https://unpkg.com/jarallax@2.0"></script>
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/menu.css" />
+    <!-- <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/menu.css" /> -->
+    <link rel="stylesheet" href="./scss/main.scss" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab&family=Titillium+Web&display=swap");
     </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+    </style>
+
     <title>La Barbieria Camillo</title>
   </head>
 
   <body>
     <nav id="main-navbar">
-      <div class="overlay hidden"></div>
-      <div class="menu hidden">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#servizi">Servizi</a></li>
-          <li><a href="#dove-siamo">Dove Siamo</a></li>
-          <li><a href="#orari">Orari</a></li>
-        </ul>
-        <button class="x">x</button>
+      <div class="menu-container">
+        <div class="overlay hidden"></div>
+        <div class="menu hidden">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#servizi">Servizi</a></li>
+            <li><a href="#dove-siamo">Dove Siamo</a></li>
+            <li><a href="#orari">Orari</a></li>
+          </ul>
+          <button class="x">x</button>
+        </div>
       </div>
       <div class="navbar-container">
         <div class="navbar-menu">
@@ -36,6 +41,9 @@
             <div class="line1"></div>
             <div class="line2"></div>
           </div>
+        </div>
+        <div class="logo">
+          <img src="/dist/img/logo_bianco_2.png" alt="logo" />
         </div>
         <!-- <div class="navbar-ul">
           <ul>
@@ -46,11 +54,11 @@
           </ul>
         </div> -->
         <div class="social">
-          <a href="https://www.facebook.com/labarbieria.camillo" target="_blank"
-            ><i class="fab fa-brands fa-facebook-square fa-2x"></i
+          <a href="https://www.facebook.com/barbieriacamillo" target="_blank"
+            ><i class="fab fa-brands fa-facebook-f fa-2x"></i
           ></a>
           <a
-            href="https://www.instagram.com/la_barbieria_camillo/"
+            href="https://www.instagram.com/labarbieriacamillo/"
             target="_blank"
             ><i class="fab fa-brands fa-instagram fa-2x"></i
           ></a>
@@ -58,22 +66,74 @@
       </div>
     </nav>
     <section id="section-a">
-      <div class="jarallax container" data-jarallax data-speed="0.3">
-        <div class="overlay-a"></div>
-        <h1>Benvenuti</h1>
-        <div class="logo">
-          <img src="/dist/img/logo_bianco_2.png" alt="logo" />
-        </div>
-        <h1>
-          <span
-            class="txt-type"
-            data-wait="3000"
-            data-words='["Dove la Tradizione", "Incontra la Modernità"]'
-          ></span>
-        </h1>
+      <div class="container">
+        <h1>Benvenuti...</h1>
+        <section id="slider">
+          <div class="slider-container">
+            <div class="photo-container slide--1">
+              <div class="slide">
+                <img src="./dist/img/Foto/photo1.jpg" alt="Photo 1" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo2.jpg" alt="Photo 2" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo3.jpg" alt="Photo 3" />
+              </div>
+            </div>
+            <div class="photo-container slide--2">
+              <div class="slide">
+                <img src="./dist/img/Foto/photo4.jpg" alt="Photo 4" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo5.jpg" alt="Photo 5" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo8.jpg" alt="Photo 8" />
+              </div>
+            </div>
+            <div class="photo-container slide--3">
+              <div class="slide">
+                <img src="./dist/img/Foto/photo6.jpg" alt="Photo 6" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo7.jpg" alt="Photo 7" />
+              </div>
+              <div class="slide">
+                <img src="./dist/img/Foto/photo9.jpg" alt="Photo 9" />
+              </div>
+            </div>
+            <button class="slider__btn slider__btn--left">
+              <i class="fas fa-solid fa-chevron-left fa-4x"></i>
+            </button>
+            <button class="slider__btn slider__btn--right">
+              <i class="fas fa-solid fa-chevron-right fa-4x"></i>
+            </button>
+          </div>
+        </section>
+        <h1>Dove la Tradizione Incontra la Modernità</h1>
       </div>
     </section>
-    <section id="servizi">
+    <section id="federico" class="section">
+      <div class="fede-container">
+        <img src="/dist/taglio3.d47c040a.jpg" alt="fede" />
+        <blockquote>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
+          dignissimos doloribus quis nobis explicabo rerum sunt repudiandae
+          maxime saepe animi iusto autem unde quibusdam nostrum itaque, tenetur
+          quo tempora ut at, voluptate ipsam, distinctio assumenda? Pariatur
+          cumque eum ullam sequi tempore voluptates officia quos dolorem animi,
+          quia placeat distinctio aspernatur vel, ipsa saepe vitae adipisci
+          reiciendis magnam incidunt dignissimos aliquam iste expedita! Optio
+          consequatur nobis sit rerum suscipit? Temporibus modi quis, sint
+          necessitatibus voluptates tenetur quia. Ab, inventore. Non tempora
+          possimus voluptate iusto, praesentium voluptatibus quo rerum ducimus
+          porro eveniet doloremque optio voluptates illo consequuntur assumenda
+          nostrum consequatur ullam nulla.
+        </blockquote>
+      </div>
+    </section>
+    <section id="servizi" class="section">
       <div class="container">
         <h2>Servizi</h2>
         <div class="logos">
@@ -92,11 +152,25 @@
         </div>
       </div>
     </section>
-    <section id="dove-siamo">
+    <section id="testimonials" class="section"></section>
+    <section id="dove-siamo" class="section">
       <div class="container">
         <h2>Dove Siamo</h2>
         <div class="map">
-          <img src="/dist/img/map.png" alt="map" />
+          <section id="map">
+            <div class="googleMapsIframeContainer">
+              <iframe
+                width=""
+                height=""
+                src="https://maps.google.com/maps?q=Via%20G.%20Matteotti%202%2C%2030029%20San%20Stino%20di%20Livenza%20VE&amp;z=14&amp;output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                class="googleMapsIframe"
+              ></iframe>
+            </div>
+          </section>
           <div class="map-text">
             <a href="https://g.page/la-barbieria-camillo?share" target="_blank">
               <h3>

@@ -1,0 +1,368 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  box-sizing: border-box;
+  font-variant: small-caps;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  font-family: Unica One, cursive;
+  overflow-x: hidden;
+}
+
+button {
+  z-index: 2;
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  z-index: 3;
+  background-color: #0009;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay-a {
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-color: #000;
+  position: absolute;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  font-size: 4rem;
+  font-weight: bolder;
+}
+
+.hidden {
+  display: none;
+}
+
+.section {
+  transition: all 3s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+#main-navbar {
+  position: auto;
+  top: 0;
+  left: 0;
+}
+
+#main-navbar .navbar-container {
+  height: 20vh;
+  text-align: center;
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  position: relative;
+}
+
+#main-navbar .navbar-container .navbar-menu .menu-lines {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3vw;
+  padding: 3vw;
+  display: flex;
+  transform: scale(1.2);
+}
+
+#main-navbar .navbar-container .navbar-menu .menu-lines:hover {
+  cursor: pointer;
+}
+
+#main-navbar .navbar-container .navbar-menu .menu-lines:hover .line1, #main-navbar .navbar-container .navbar-menu .menu-lines:hover .line2 {
+  transition: all 1s;
+}
+
+#main-navbar .navbar-container .navbar-menu .menu-lines .line1 {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+#main-navbar .navbar-container .navbar-menu .menu-lines .line2 {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+}
+
+#main-navbar .navbar-container .logo {
+  margin: auto;
+  padding-top: 1vh;
+}
+
+#main-navbar .navbar-container .logo img {
+  height: 18vh;
+  width: auto;
+}
+
+#main-navbar .navbar-container .social {
+  justify-content: right;
+  margin-right: 5vw;
+  display: flex;
+  transform: scale(1.2);
+}
+
+#main-navbar .navbar-container .social a {
+  color: #fff;
+  padding: 1vw;
+}
+
+#main-navbar .navbar-container .social a:hover {
+  color: #0e76bc;
+}
+
+.menu-container {
+  position: relative;
+}
+
+.menu-container .menu {
+  z-index: 5;
+  height: 50vh;
+  width: 50vw;
+  color: #0e76bc;
+  background-color: #fff;
+  position: absolute;
+  top: 150px;
+  left: 25%;
+}
+
+.menu-container .menu ul {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 3rem;
+}
+
+.menu-container .menu .x {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+.menu-container .menu .x:hover {
+  cursor: pointer;
+  transition: all 1s;
+  transform: scale(2);
+}
+
+#section-a .container {
+  height: 80vh;
+  text-align: center;
+  z-index: -1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#section-a .container h1 {
+  font-variant: small-caps;
+  color: #000;
+  margin: auto;
+  padding: 20px 0;
+  font-size: 5rem;
+}
+
+#slider .slider-container {
+  height: 40vh;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+#slider .slider-container .slider__btn--left {
+  margin: auto;
+  position: absolute;
+  left: -45vw;
+}
+
+#slider .slider-container .slider__btn--right {
+  margin: auto;
+  position: absolute;
+  right: -45vw;
+}
+
+#slider .slider-container .photo-container {
+  transition: transform 1s;
+  display: flex;
+  position: absolute;
+}
+
+#slider .slider-container .photo-container .slide img {
+  width: 20vw;
+  border-radius: 5px;
+  padding: 0 20px;
+}
+
+#federico .fede-container {
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+#federico .fede-container img {
+  width: 15vw;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+#federico .fede-container blockquote {
+  color: #fff;
+  width: 60%;
+  padding: 2vh 2vw;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#servizi {
+  height: 55vh;
+  background-color: #fff;
+}
+
+#servizi .logos {
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+
+#servizi .logos .icons {
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+
+#servizi .logos .icons img {
+  width: 40%;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+#servizi .logos .icons h3 {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#dove-siamo .container {
+  color: #fff;
+  background: #000;
+}
+
+#dove-siamo .container .map {
+  text-align: center;
+  display: flex;
+}
+
+#dove-siamo .container .map .googleMapsIframeContainer {
+  justify-content: center;
+  padding: 10px;
+  display: flex;
+}
+
+#dove-siamo .container .map .googleMapsIframe {
+  width: 80vw;
+  height: 80vh;
+  margin: auto;
+}
+
+#dove-siamo .container .map .map-text {
+  padding: 0 50px;
+}
+
+#dove-siamo .container .map .map-text a {
+  color: #ff0;
+}
+
+#dove-siamo .container .map .map-text a:hover {
+  text-decoration: underline;
+}
+
+#dove-siamo .container .map .map-text ul {
+  margin: 0;
+  padding: 0;
+}
+
+#dove-siamo .container .map .map-text ul li {
+  padding: 20px 0;
+}
+
+#dove-siamo .container .map .map-text ul li:first-child {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#main-footer {
+  height: 10vh;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  display: flex;
+}
+
+#main-footer p {
+  padding-left: 50px;
+}
+
+#main-footer i {
+  color: #fff;
+  padding: 0 1rem;
+  transform: scale(1.5);
+}
+
+#main-footer a {
+  color: #fff;
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=index.574c7455.css.map */

@@ -1,0 +1,27 @@
+{
+  "name": "la_barbieria_camillo",
+  "version": "1.0.0",
+  "description": "Barbershop",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mulaz9/La_Barbieria_Camillo.git"
+  },
+  "author": "Davide Mulato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mulaz9/La_Barbieria_Camillo/issues"
+  },
+  "homepage": "https://github.com/mulaz9/La_Barbieria_Camillo#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "parcel": "^2.6.2"
+  },
+  "dependencies": {
+    "sass": "^1.53.0"
+  }
+}
