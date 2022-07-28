@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,12 +9,11 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./scss/main.scss" />
-
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Slab&family=Titillium+Web&display=swap");
-    </style>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
     </style>
 
     <title>La Barbieria Camillo</title>
@@ -25,11 +24,15 @@
       <div class="menu-container">
         <div class="overlay hidden"></div>
         <div class="menu hidden">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#dove-siamo">Dove Siamo</a></li>
-            <li><a href="#orari">Orari</a></li>
+          <ul class="menu-ul">
+            <li><a class="menu-link" href="#federico">Chi Siamo</a></li>
+            <li><a class="menu-link" href="#servizi">Servizi</a></li>
+            <li><a class="menu-link" href="#testimonials">Dicono di Noi</a></li>
+            <li><a class="menu-link" href="#dove-siamo">Dove Siamo</a></li>
+            <li><a class="menu-link" href="#orari">Orari</a></li>
+            <li>
+              <a href="+393703696569">Tel. 370 3696569</a>
+            </li>
           </ul>
           <button class="x">x</button>
         </div>
@@ -38,20 +41,13 @@
         <div class="navbar-menu">
           <div class="menu-lines">
             <div class="line1"></div>
+            <div class="menu-txt menu-txt--hidden">Menu</div>
             <div class="line2"></div>
           </div>
         </div>
         <div class="logo">
           <img src="/dist/img/logo_bianco_2.png" alt="logo" />
         </div>
-        <!-- <div class="navbar-ul">
-          <ul>
-            <li class="home"><a href="">Home</a></li>
-            <li class="servizi"><a href="">Servizi</a></li>
-            <li class="dove-siamo"><a href="">Dove Siamo</a></li>
-            <li class="prenota"><a href="">Prenota</a></li>
-          </ul>
-        </div> -->
         <div class="social">
           <a href="https://www.facebook.com/barbieriacamillo" target="_blank"
             ><i class="fab fa-brands fa-facebook-f fa-2x"></i
@@ -64,9 +60,12 @@
         </div>
       </div>
     </nav>
-    <section id="section-a">
+    <section id="section-a" class="menu-txt--hidden">
       <div class="container">
         <h1>Benvenuti...</h1>
+        <div class="mobile-img">
+          <img src="/dist/img/facebook-bg.jpg" alt="mobile" />
+        </div>
         <section id="slider">
           <div class="slider-container">
             <div class="photo-container slide--1">
@@ -115,21 +114,21 @@
     </section>
     <section id="federico" class="section">
       <div class="fede-container">
-        <img src="/dist/taglio3.d47c040a.jpg" alt="fede" />
-        <blockquote>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
-          dignissimos doloribus quis nobis explicabo rerum sunt repudiandae
-          maxime saepe animi iusto autem unde quibusdam nostrum itaque, tenetur
-          quo tempora ut at, voluptate ipsam, distinctio assumenda? Pariatur
-          cumque eum ullam sequi tempore voluptates officia quos dolorem animi,
-          quia placeat distinctio aspernatur vel, ipsa saepe vitae adipisci
-          reiciendis magnam incidunt dignissimos aliquam iste expedita! Optio
-          consequatur nobis sit rerum suscipit? Temporibus modi quis, sint
-          necessitatibus voluptates tenetur quia. Ab, inventore. Non tempora
-          possimus voluptate iusto, praesentium voluptatibus quo rerum ducimus
-          porro eveniet doloremque optio voluptates illo consequuntur assumenda
-          nostrum consequatur ullam nulla.
-        </blockquote>
+        <img src="/dist/img/fede.jpeg" alt="fede" />
+        <div class="fede-text">
+          <blockquote class="text">
+            Fin da quando ero ragazzo i capelli per me erano molto importanti,
+            mi piaceva essere sempre perfetto ed ero un ragazzo molto socievole!
+            Non è stato difficile capire quale sarebbe stato il mio mestiere e
+            la mia passione!!! Dopo un percorso di corsi e formazione in molti
+            salone ho dato origine a un idea che avevo da tempo… Una barbieria
+            moderna che incontra la tradizione del nostro mestiere !! Adesso
+            siamo qui a prenderci cura dei clienti con tecniche moderne,
+            attrezzatura all’avanguardia, la cordialità e un ambiente d’altri
+            tempi.
+          </blockquote>
+          <p class="signature">Federico Camillo</p>
+        </div>
       </div>
     </section>
     <section id="servizi" class="section">
@@ -141,21 +140,75 @@
             <h3>Cura della Barba</h3>
           </div>
           <div class="icons">
-            <img src="/dist/img/haircut.jpg" alt="haircut" />
+            <img src="/dist/img/haircut2.png" alt="haircut" />
             <h3>Taglio Capelli</h3>
           </div>
           <div class="icons">
-            <img src="/dist/img/razor.jpg" alt="razor" />
+            <img src="/dist/img/razor2.png" alt="razor" />
             <h3>Rasatura</h3>
           </div>
         </div>
       </div>
     </section>
-    <section id="testimonials" class="section"></section>
+    <section id="testimonials" class="section">
+      <div class="testimonials-container">
+        <div class="testimonials-img">
+          <img src="./dist/img/testimonials2.jpeg" alt="test-img" />
+        </div>
+        <div class="testimonials-text">
+          <h2>Dicono di Noi</h2>
+          <div class="testimonials-slider">
+            <div class="testimonials-slide slide-1">
+              <div class="testimonials-field">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>
+                  Ottima accoglienza e preparazione. Si nota che ne ha fatti di
+                  tagli. Taglio veramente eccezionale. Luogo davvero ben curato
+                  e caratteristico di barbieria "old".
+                </p>
+                <p class="testimonials-name">Edoardo P.</p>
+              </div>
+              <div class="testimonials-field">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>
+                  Federico è il miglior parrucchiere uomo che ci sia nella zona.
+                  Quando mio figlio ha iniziato ad andare da lui aveva solo 4
+                  anni e da allora non vuole andare da nessun altro.
+                </p>
+                <p class="testimonials-name">Marika L.</p>
+              </div>
+            </div>
+            <div class="testimonials-slide slide-2 section--hidden">
+              <div class="testimonials-field">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>
+                  La Barbieria Camillo è un luogo dove ti senti a tuo agio dal
+                  primo momento in cui entri, Federico è un professionista e un
+                  perfezionista. Accurato nel minimo dettaglio.
+                  Consigliatissimo, tagli davvero impeccabili!
+                </p>
+                <p class="testimonials-name">Cris M.</p>
+              </div>
+              <div class="testimonials-field">
+                <p class="stars">⭐⭐⭐⭐⭐</p>
+                <p>
+                  Servizio di barbieria curato e pulito, ambiente giovane e
+                  piacevole. Federico, una macchina da guerra! Ho notato l'ampia
+                  fascia di età dei clienti, che va dai più giovani, ai più
+                  anziani, consigliato a tutti quindi.
+                </p>
+                <p class="testimonials-name">Alberto M.</p>
+              </div>
+            </div>
+          </div>
+          <button class="testimonials-btn">&uarr; &darr;</button>
+        </div>
+      </div>
+    </section>
     <section id="dove-siamo" class="section">
       <div class="container">
         <h2>Dove Siamo</h2>
-        <div class="map">
+        <div class="map-container">
           <section id="map">
             <div class="googleMapsIframeContainer">
               <iframe
@@ -170,50 +223,51 @@
               ></iframe>
             </div>
           </section>
-          <div class="map-text">
-            <a href="https://g.page/la-barbieria-camillo?share" target="_blank">
-              <h3>
-                via G. Matteotti, 2 <br />
-                San Stino di Livenza (VE)
-              </h3>
-            </a>
-            <ul>
-              <li id="orari">ORARI</li>
-              <li>
-                Martedi <br />
-                8.30-12.00 <br />
-                15.00-19.30
-              </li>
-              <li>
-                Mercoledì <br />
-                15.00-22.00
-              </li>
-              <li>
-                Giovedì <br />
-                8.30-12.00 <br />
-                15.00-19.30
-              </li>
-              <li>
-                Venerdì <br />
-                9.00-12.30 <br />
-                15.00-19.30
-              </li>
-              <li>
-                Sabato <br />
-                8.00-17.00 continuato
-              </li>
-            </ul>
-          </div>
+          <section id="orari">
+            <div class="map-text">
+              <ul>
+                <li class="orari">Orari</li>
+                <li>
+                  Martedi <br />
+                  8.30-12.00 <br />
+                  15.00-19.30
+                </li>
+                <li>
+                  Mercoledì <br />
+                  15.00-22.00
+                </li>
+                <li>
+                  Giovedì <br />
+                  8.30-12.00 <br />
+                  15.00-19.30
+                </li>
+                <li>
+                  Venerdì <br />
+                  9.00-12.30 <br />
+                  15.00-19.30
+                </li>
+                <li>
+                  Sabato <br />
+                  8.00-17.00 continuato
+                </li>
+                <li>
+                  <a href="+393703696569"
+                    ><i class="fas fa-solid fa-phone"></i><br />370 3696569</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
     </section>
     <footer id="main-footer">
-      <p>La Barbieria Camillo &copy; 2022, All Rights Reserved</p>
       <div class="developer">
         <a href="mailto:davide.mulato@gmail.com">
           <i class="fas fa-solid fa-desktop"></i>Davide Mulato</a
         >
       </div>
+      <p>La Barbieria Camillo &copy; 2022, All Rights Reserved</p>
     </footer>
   </body>
 

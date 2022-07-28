@@ -12,6 +12,14 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  margin: 0;
+  padding: 20px;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
 button {
   border: none;
   background: transparent;
@@ -23,7 +31,6 @@ button {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 ul {
@@ -49,13 +56,6 @@ ul {
   background-color: black;
   z-index: -2;
 }
-h2 {
-  margin: 0;
-  padding: 20px;
-  font-size: 4rem;
-  font-weight: bolder;
-  text-align: center;
-}
 
 .hidden {
   display: none;
@@ -67,5 +67,19 @@ h2 {
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(3rem);
+  transform: translateY(2rem);
+}
+
+.menu-txt--hidden {
+  opacity: 0;
+}
+
+.slide-2 {
+  transform: translateY(100%);
+}
+.slide-3 {
+  transform: translateY(200%);
+}
+.slide-4 {
+  transform: translateY(300%);
 }
