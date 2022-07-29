@@ -119,7 +119,7 @@ const slider = function () {
     e.key === "ArrowRight" && nextSlide();
   });
 
-  touchable.addEventListener("touchmove", function (e) {
+  touchable.addEventListener("touchend", function (e) {
     nextSlide();
   });
 };

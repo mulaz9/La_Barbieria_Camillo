@@ -577,6 +577,14 @@ ul {
     font-size: 1.1rem;
   }
 
+  #servizi .logos {
+    grid-template-columns: 1fr;
+  }
+
+  #servizi .logos .icons {
+    transform: scale(.7);
+  }
+
   #testimonials .testimonials-container .testimonials-img {
     display: none;
   }
@@ -648,6 +656,10 @@ ul {
     font-size: 1.1rem;
   }
 
+  #servizi .logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   #testimonials .testimonials-container .testimonials-img {
     display: none;
   }
@@ -684,6 +696,28 @@ ul {
   #dove-siamo .container .map-container ul li:last-child {
     padding: 10px;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-height: 380px) {
+  #main-navbar .navbar-container {
+    justify-content: space-between;
+  }
+
+  #section-a .container h1 {
+    font-size: 2rem;
+  }
+
+  #section-a .container #slider .slider-container {
+    height: 30vh;
+  }
+
+  #section-a .container #slider .slider-container .slide {
+    transform: scale(.7);
+  }
+
+  #section-a .container #slider .slider-container .slide img {
+    padding: 0 2vw;
   }
 }
 

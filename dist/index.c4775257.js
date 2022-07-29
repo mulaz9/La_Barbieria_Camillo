@@ -102,7 +102,7 @@ const slider = function() {
         if (e.key === "ArrowLeft") prevSlide();
         e.key === "ArrowRight" && nextSlide();
     });
-    touchable.addEventListener("touchmove", function(e) {
+    touchable.addEventListener("touchend", function(e) {
         nextSlide();
     });
 };

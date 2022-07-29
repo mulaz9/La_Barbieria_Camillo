@@ -500,6 +500,15 @@
     }
   }
 
+  #servizi {
+    .logos {
+      grid-template-columns: 1fr;
+      .icons {
+        transform: scale(0.7);
+      }
+    }
+  }
+
   #testimonials {
     .testimonials-container {
       .testimonials-img {
@@ -587,6 +596,12 @@
     }
   }
 
+  #servizi {
+    .logos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   #testimonials {
     .testimonials-container {
       .testimonials-img {
@@ -628,6 +643,33 @@
             &:last-child {
               font-size: 1.2rem;
               padding: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 380px) {
+  #main-navbar {
+    .navbar-container {
+      justify-content: space-between;
+    }
+  }
+
+  #section-a {
+    .container {
+      h1 {
+        font-size: 2rem;
+      }
+      #slider {
+        .slider-container {
+          height: 30vh;
+          .slide {
+            transform: scale(0.7);
+            img {
+              padding: 0 2vw;
             }
           }
         }
