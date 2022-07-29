@@ -468,24 +468,10 @@
 
   #federico {
     .fede-container {
+      padding-top: 30px;
       flex-direction: column;
-      #federico {
-        .fede-container {
-          flex-direction: column;
-          img {
-            width: 30vw;
-          }
-          .fede-text {
-            width: 100%;
-            .text {
-              text-align: center;
-              font-size: 1rem;
-            }
-            .signature {
-              font-size: 1.1rem;
-            }
-          }
-        }
+      img {
+        width: 30vw;
       }
       .fede-text {
         width: 100%;
@@ -497,6 +483,16 @@
           font-size: 1.1rem;
         }
       }
+    }
+  }
+  .fede-text {
+    width: 100%;
+    .text {
+      text-align: center;
+      font-size: 1rem;
+    }
+    .signature {
+      font-size: 1.1rem;
     }
   }
 

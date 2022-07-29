@@ -543,25 +543,13 @@ ul {
     padding: 0 1.5vw;
   }
 
-  #federico .fede-container, #federico .fede-container #federico .fede-container {
+  #federico .fede-container {
     flex-direction: column;
+    padding-top: 30px;
   }
 
-  #federico .fede-container #federico .fede-container img {
+  #federico .fede-container img {
     width: 30vw;
-  }
-
-  #federico .fede-container #federico .fede-container .fede-text {
-    width: 100%;
-  }
-
-  #federico .fede-container #federico .fede-container .fede-text .text {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  #federico .fede-container #federico .fede-container .fede-text .signature {
-    font-size: 1.1rem;
   }
 
   #federico .fede-container .fede-text {
@@ -574,6 +562,19 @@ ul {
   }
 
   #federico .fede-container .fede-text .signature {
+    font-size: 1.1rem;
+  }
+
+  .fede-text {
+    width: 100%;
+  }
+
+  .fede-text .text {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .fede-text .signature {
     font-size: 1.1rem;
   }
 
