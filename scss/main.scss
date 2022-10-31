@@ -47,7 +47,7 @@
         }
         .line2 {
           width: 40px;
-          height: 2px;
+          height: 1.5px;
           background-color: $light-color;
         }
       }
@@ -266,11 +266,13 @@
     }
     .testimonials-text {
       padding: 3vw;
+      margin: auto;
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
-      width: 40vw;
+      justify-content: center;
+      width: 100%;
       h2 {
         color: $dark-color;
       }
@@ -282,12 +284,14 @@
         overflow: hidden;
         .testimonials-slide {
           position: absolute;
+          align-items: center;
+          text-align: center;
           display: flex;
           flex-direction: column;
           transition: transform 1s;
           .testimonials-field {
             height: 223px;
-            width: 570px;
+            width: 80%;
             background-color: #f4f4f4;
             margin: 0.5vh 0;
             font-size: 1.3rem;
